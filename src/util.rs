@@ -12,6 +12,7 @@ pub(crate) fn get_puzzle_input(day: i8) -> String {
 
     let input = match ureq::get(&*format!("https://adventofcode.com/2022/day/{}/input", day))
         .set("Cookie", &*format!("session={}", session_key))
+        .set("User-Agent", "https://github.com/itsCryne/aoc2022 by paddi@cryne.me")
         .call() {
         Ok(response) => response.into_string().unwrap(),
         Err(Error::Status(code, response)) => {
