@@ -1,0 +1,5 @@
+/target
+.idea
+aoc2020.iml
+inputs
+session_key.txt
