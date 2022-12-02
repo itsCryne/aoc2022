@@ -1,4 +1,4 @@
-pub(crate) fn a(input: &str) -> usize {
+pub fn a(input: &str) -> usize {
     let lines: Vec<&str> = input.lines().collect();
     let mut cals = vec![0;lines.len()];
     let mut elf = 0;
@@ -13,7 +13,7 @@ pub(crate) fn a(input: &str) -> usize {
 
     return *cals.iter().max().unwrap();
 }
-pub(crate) fn b(input: &str) -> usize {
+pub fn b(input: &str) -> usize {
     let lines: Vec<&str> = input.lines().collect();
     let mut cals = vec![0;lines.len()];
     let mut elf = 0;

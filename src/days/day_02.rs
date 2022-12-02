@@ -1,4 +1,4 @@
-pub(crate) fn a(input: &str) -> usize {
+pub fn a(input: &str) -> usize {
     let lines = input.lines();
     let mut score = 0;
 
@@ -19,7 +19,7 @@ pub(crate) fn a(input: &str) -> usize {
 
     return score;
 }
-pub(crate) fn b(input: &str) -> usize {
+pub fn b(input: &str) -> usize {
     let lines = input.lines();
     let mut score = 0;
 

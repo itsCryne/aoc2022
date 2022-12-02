@@ -2,7 +2,7 @@ use std::fs::read_to_string;
 use ureq;
 use ureq::Error;
 
-pub(crate) fn get_puzzle_input(day: i8) -> String {
+pub fn get_puzzle_input(day: i8) -> String {
     if let Ok(input) = std::fs::read_to_string(format!("inputs/day_{:02}.txt", day)) {
         return input;
     }
