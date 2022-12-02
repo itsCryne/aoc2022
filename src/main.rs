@@ -44,7 +44,8 @@ fn fmt_time(ns: u128) -> String {
 fn main() {
     //TODO: Optimize this with generics so we can use appropiately sized types on every function
     let day_vec = vec![
-        [day_01::a, day_01::b]
+        [day_01::a, day_01::b],
+        [day_02::a, day_02::b]
     ];
 
     let args: Vec<String> = env::args().collect();
