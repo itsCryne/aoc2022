@@ -19,13 +19,12 @@
 mod days;
 mod util;
 
-use std::env;
+use std::{env, fmt::Display};
 use days::*;
 use util::get_puzzle_input;
 
 fn main() {
-    //TODO: Optimize this with generics so we can use appropiately sized types on every function
-    let day_vec = vec![
+    let day_vec: Vec<[fn(&str) -> Box<dyn Display>; 2]> = vec![
         [day_01::a, day_01::b],
         [day_02::a, day_02::b],
         [day_03::a, day_03::b],

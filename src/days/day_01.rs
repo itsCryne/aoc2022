@@ -1,4 +1,6 @@
-pub fn a(input: &str) -> usize {
+use std::fmt::Display;
+
+pub fn a(input: &str) -> Box<dyn Display> {
     let lines: Vec<&str> = input.lines().collect();
     let mut cals = vec![0;lines.len()];
     let mut elf = 0;
@@ -11,9 +13,9 @@ pub fn a(input: &str) -> usize {
         }
     }
 
-    return *cals.iter().max().unwrap();
+    return Box::new(*cals.iter().max().unwrap());
 }
-pub fn b(input: &str) -> usize {
+pub fn b(input: &str) -> Box<dyn Display> {
     let lines: Vec<&str> = input.lines().collect();
     let mut cals = vec![0;lines.len()];
     let mut elf = 0;
@@ -28,6 +30,6 @@ pub fn b(input: &str) -> usize {
 
     cals.sort_unstable_by(|a, b| b.cmp(a));
 
-    return cals[0] + cals[1] + cals[2];
+    return Box::new(cals[0] + cals[1] + cals[2]);
 }
 

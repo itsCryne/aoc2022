@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 fn to_bitfield(start: u8, end: u8) -> u128 {
     let mut res: u128 = 0;
     for i in start..=end {
@@ -6,7 +8,7 @@ fn to_bitfield(start: u8, end: u8) -> u128 {
     res
 }
 
-pub fn a(input: &str) -> usize {
+pub fn a(input: &str) -> Box<dyn Display> {
     let mut res = 0;
     for line in input.lines() {
         let (e1, e2) = line.split_once(",").unwrap();
@@ -23,10 +25,10 @@ pub fn a(input: &str) -> usize {
 
     }
 
-    res
+    Box::new(res)
 }
 
-pub fn b(input: &str) -> usize {
+pub fn b(input: &str) -> Box<dyn Display> {
     let mut res = 0;
     for line in input.lines() {
         let (e1, e2) = line.split_once(",").unwrap();
@@ -43,6 +45,6 @@ pub fn b(input: &str) -> usize {
 
     }
 
-    res as usize
+    Box::new(res as usize)
 }
 

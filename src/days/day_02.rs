@@ -1,4 +1,6 @@
-pub fn a(input: &str) -> usize {
+use std::fmt::Display;
+
+pub fn a(input: &str) -> Box<dyn Display> {
     let lines = input.lines();
     let mut score = 0;
 
@@ -17,9 +19,9 @@ pub fn a(input: &str) -> usize {
         }
     }
 
-    return score;
+    return Box::new(score);
 }
-pub fn b(input: &str) -> usize {
+pub fn b(input: &str) -> Box<dyn Display> {
     let lines = input.lines();
     let mut score = 0;
 
@@ -38,6 +40,6 @@ pub fn b(input: &str) -> usize {
         }
     }
 
-    return score;
+    return Box::new(score);
 }
 
