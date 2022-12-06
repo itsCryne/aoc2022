@@ -16,6 +16,9 @@ fn criterion_benchmark(c: &mut Criterion) {
 
     c.bench_function("Day 05a", |b| b.iter(|| day_05::a(black_box(&get_puzzle_input(5)))));
     c.bench_function("Day 05b", |b| b.iter(|| day_05::b(black_box(&get_puzzle_input(5)))));
+
+    c.bench_function("Day 06a", |b| b.iter(|| day_06::a(black_box(&get_puzzle_input(6)))));
+    c.bench_function("Day 06b", |b| b.iter(|| day_06::b(black_box(&get_puzzle_input(6)))));
 }
 
 criterion_group!(benches, criterion_benchmark);
