@@ -33,7 +33,8 @@ fn main() {
         [day_06::a, day_06::b],
         [day_07::a, day_07::b],
         [day_08::a, day_08::b],
-        [day_09::a, day_09::b]
+        [day_09::a, day_09::b],
+        [day_10::a, day_10::b]
         ];
 
     let args: Vec<String> = env::args().collect();
