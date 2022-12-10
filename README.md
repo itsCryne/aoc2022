@@ -1,18 +1,13 @@
 # [Advent of Code 2022](https://adventofcode.com/2022/) solutions
 
-### What this repository is
-This repository contains solutions to [Eric Wastl](https://twitter.com/ericwastl)s Advent of Code 2022. Thank you, Eric!
+## General pieces of information
+This repositroy contains my solutions to the Advent of Code 2022 puzzles.
+I upload the sourcecode "as is" i.e. I do not modify it once I have solved the respective puzzles.
 
-While the code aims to be as fast as possible (the goal is to complete all puzzles of 2022 in under one second),
-I often lack the time and/or knowledge to optimize it properly.
+Thus, the code in this repository is in the best case unoptimized and in the worst case an utter mess.
+My plan is to revise the solutions later on and add the polished code to another branch
 
-### What this repository is **not**
-I'm currently learning Rust, so don't expect the solutions to be idiomatic.
-
-This is not the "best" or maybe not even a "good" solution. Most often it "just works".<br>
-Please do not use this repository to learn how to write good or fast code.
-
-### Setup
+## Setup
 - Create a file named "session_key.txt" in the "src" folder.
 - Get your session key
     - Press CTRL + Shift + I
