@@ -2,6 +2,7 @@ use criterion::{black_box, criterion_group, criterion_main, Criterion};
 use aoc2022::{days::*, util::get_puzzle_input};
 
 fn criterion_benchmark(c: &mut Criterion) {
+
     c.bench_function("Day 01a", |b| b.iter(|| day_01::a(black_box(&get_puzzle_input(1)))));
     c.bench_function("Day 01b", |b| b.iter(|| day_01::b(black_box(&get_puzzle_input(1)))));
 
@@ -37,6 +38,9 @@ fn criterion_benchmark(c: &mut Criterion) {
 
     c.bench_function("Day 11a", |b| b.iter(|| day_11::a(black_box(&get_puzzle_input(11)))));
     c.bench_function("Day 11b", |b| b.iter(|| day_11::b(black_box(&get_puzzle_input(11)))));
+
+    c.bench_function("Day 12a", |b| b.iter(|| day_12::a(black_box(&get_puzzle_input(12)))));
+    c.bench_function("Day 12b", |b| b.iter(|| day_12::b(black_box(&get_puzzle_input(12)))));
 }
 
 criterion_group!(benches, criterion_benchmark);
