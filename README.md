@@ -20,6 +20,5 @@ My plan is to revise the solutions later on and add the polished code to another
         - **WARNING**: DO NOT SHARE THIS KEY. NOT EVEN WITH YOUR DOG!
 - Paste this string (and only this string!) into the "session_key.txt" file
 - You can now [run the project with Cargo](https://doc.rust-lang.org/cargo/commands/cargo-run.html) (you must have [Rust installed](https://www.rust-lang.org/tools/install)).
-- To schedule multiple runs (for averaging the times), add the number of runs just after the cargo command
 
 If the request fails with "500 Internal Server Error", you entered a wrong session key.
