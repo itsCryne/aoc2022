@@ -38,7 +38,8 @@ fn main() {
         [day_11::a, day_11::b],
         [day_12::a, day_12::b],
         [day_13::a, day_13::b],
-        [day_14::a, day_14::b]
+        [day_14::a, day_14::b],
+        [day_15::a, day_15::b]
         ];
 
     let args: Vec<String> = env::args().collect();
@@ -54,9 +55,11 @@ fn main() {
             continue;
         }
         let input = get_puzzle_input((day + 1) as i8);
+        println!("Day {:02}:", day+1);
         let a_result = tasks[0](&input);
+        println!("A: {}", a_result);
         let b_result = tasks[1](&input);
 
-        println!("Day {:02}:\n A: {}\n B: {}", day+1,  a_result, b_result);
+        println!("B: {}", b_result);
     }
 }
