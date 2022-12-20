@@ -62,6 +62,12 @@ fn criterion_benchmark(c: &mut Criterion) {
 
     g.bench_function("Day 18a", |b| b.iter(|| day_18::a(black_box(&get_puzzle_input(18)))));
     g.bench_function("Day 18b", |b| b.iter(|| day_18::b(black_box(&get_puzzle_input(18)))));
+    
+    g.bench_function("Day 19a", |b| b.iter(|| day_19::a(black_box(&get_puzzle_input(19)))));
+    g.bench_function("Day 19b", |b| b.iter(|| day_19::b(black_box(&get_puzzle_input(19)))));
+
+    g.bench_function("Day 20a", |b| b.iter(|| day_20::a(black_box(&get_puzzle_input(20)))));
+    g.bench_function("Day 20b", |b| b.iter(|| day_20::b(black_box(&get_puzzle_input(20)))));
 
     g.finish();
 }
